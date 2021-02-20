@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>نظام النتيجة الإلكتروني</title>
+
+  <!-- link the css file -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- circle shapes -->
+    <div class="shapes">
+      <div class="shape top"></div>
+      <div class="shape bottom"></div>
+    </div>
+
+    <!-- main content -->
+    <section class="main-content">
+      <h1>نظام النتيجة الإلكتروني</h1>
+      <div class="input-box">
+        <label for="input">أدخل الرقم الجامعي :</label>
+        <input type="number" id="input" class="input">
+        <p class="note hide">يجب ان يتكون الرقم من 10 خانات</p>
+        <div class="custom-select">
+          <select name="department" class="department">
+            <option value="it">تقنية معلومات</option>
+            <option value="is">نظم معلومات</option>
+            <option value="cs">علوم حاسوب</option>
+          </select>
+        </div>
+        <button class="button clicked">عرض النتيجة</button>
+      </div>
+
+      <!-- loading spinner -->
+      <div class="spinner loaded"></div>
+
+      <!-- result info -->
+      <div class="result-box active"></div>
+
+    </section>
+  </div>
+
+  <!-- link the javaScript file -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

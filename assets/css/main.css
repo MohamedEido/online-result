@@ -1,0 +1,278 @@
+@font-face {
+  font-family: "Droid Arabic Kufi";
+  font-weight: 400;
+  src: url(../fonts/DroidKufi-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Droid Arabic Kufi";
+  font-weight: 700;
+  src: url(../fonts/DroidKufi-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Droid Arabic Kufi", sans-serif;
+}
+
+body {
+  direction: rtl;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+/* start container */
+.container {
+  position: relative;
+  min-height: 100vh;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+}
+
+/* circle shapes */
+.shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.shapes .shape {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: url(../images/shape.svg);
+  background-size: cover;
+}
+
+.shapes .top {
+  top: -350px;
+  right: -150px;
+}
+
+.shapes .bottom {
+  bottom: -370px;
+  left: -230px;
+}
+
+/* start main content */
+.main-content {
+  position: relative;
+  width: 100%;
+}
+
+h1 {
+  margin: 50px 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  text-shadow: 0 0 1px rgba(0, 0, 0, .1);
+  user-select: none;
+}
+
+/* input box */
+.input-box {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.input-box label {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 3px;
+  user-select: none;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  height: 45px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  padding: 5px 20px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  transition: .3s;
+  outline: none;
+}
+
+.input:focus {
+  border: 1px solid #1abc9c;
+  box-shadow: 0 0 0 3px rgb(26, 188, 156, .5);
+}
+
+/* removing spinners from the input */
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+  display: none;
+}
+
+/* error note */
+.note {
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 700;
+  color: #f44336;
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+.note.hide {
+  display: none;
+}
+
+/* select box container */
+.custom-select {
+  position: relative;
+  width: 180px;
+  height: 45px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 3px;
+}
+
+.custom-select::before {
+  content: url(../images/angle.svg);
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 15px;
+  height: 0px;
+  user-select: none;
+}
+
+/* select box */
+.department {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  padding: 0 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.button {
+  position: relative;
+  width: 140px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #1abc9c;
+  box-shadow: 0 0 3px rgb(0, 0, 0, .3);
+  border-radius: 3px;
+  padding: 0 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  transition: .3s;
+}
+
+.button.clicked {
+  background-color: #8cddcd;
+  pointer-events: none;
+}
+
+/* loading spinner */
+.spinner {
+  width: 70px;
+  height: 70px;
+  background-image: url(../images/spinner.svg);
+  background-size: cover;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.spinner.loaded {
+  display: none;
+}
+
+/* start result */
+.result-box {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.result-box.active {
+  display: none;
+}
+
+.error-msg {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f44336;
+}
+
+.content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 7px;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 15px;
+  height: 15px;
+  margin-left: 7px;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.value {
+  display: inline-block;
+  line-height: 1;
+  color: #333;
+}
+
+/* result body */
+.result-content li {
+  list-style: none;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.degree {
+  display: inline-block;
+  color: #1abc9c;
+  margin-right: 50px;
+}
