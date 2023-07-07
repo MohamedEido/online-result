@@ -26,7 +26,7 @@ button.addEventListener('click', () => {
 
   switch (department.value) {
     case 'it':
-      link = 'http://localhost/online-result/assets/js/result.json';
+      link = 'result.json';
       break;
     case 'is':
       link = 'http://localhost/online-result/assets/js/result.json';
